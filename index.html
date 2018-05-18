@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pig Game</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <section class="section" id="start">
+            <div class="section__box section--start">
+                <header class="section__header">
+                   <h1 class="section__header--big">Pig Dice Game</h1> 
+                </header>
+                <nav class="section__main-page-nav">
+                    <a href="#game" class="btn btn--big btn--animated">Start game</a>
+                    <a href="#rules" class="btn btn--big btn--animated">Rules</a>
+                </nav>
+                <footer class="section__footer">
+                   <span class="section__footer-content section__footer-copyright">&copy; <a href="mailto:monika.dembek@gmail.com" class="section__copyright-link">monika.dembek@gmail.com</a></span> 
+                </footer>
+            </div>
+        </section>
+        <section class="section section--game" id="game">
+            <div class="section__box game__box">
+                <nav class="game__nav">
+                    <div class="game__input-box">
+                        <label for="winning-points"> Number of points to win: 
+                            <span class="game__points-to-win">100</span>
+                        </label>
+                        <input type="text" id="winning-points" class="game__nav-input" placeholder="100">
+                        <button id="changeWinPoints" class="btn-round">&check;</button>
+                    </div>
+                    <div class="game__buttons">
+                        <a href="#" class="btn" id="newGame">New game</a>
+                        <a href="#" class="btn" id="roll">Roll</a>
+                        <a href="#" class="btn" id="hold">Hold</a> 
+                    </div>
+                    <footer class="section__footer game__nav-footer">
+                        <span class="section__footer-content"><a href="#start" class="btn-round btn-back-game">&larr;</a></span>
+                    </footer>
+                </nav>
+                <main class="game__scores">
+                    <div class="game__player-scores-box">
+                        <h3 class="game__player0">Player 1</h3>
+                        <p>
+                            Total score:
+                            <span class="game__total-score-p0">5</span>
+                        </p>
+                        <p>
+                            Round score:
+                            <span class="game__round-score-p0">0</span>
+                        </p>
+                    </div>
+                    <div class="game__dice-box">
+                        <img src="img/dice-1.png" alt="dice picture" class="game__dice">
+                    </div>
+                    <div class="game__player-scores-box">
+                        <h3 class="game__player1">Player 2</h3>
+                        <p>
+                            Total score:
+                            <span class="game__total-score-p1">0</span>
+                        </p>
+                        <p>
+                            Round score:
+                            <span class="game__round-score-p1">0</span>
+                        </p>
+                    </div>
+                </main>
+            </div>
+        </section>
+        <section class="section section__rules" id="rules">
+            <div class="section__box">
+                <header class="section__header">
+                   <h2 class="section__header--big">Rules of Pig Game</h2> 
+                </header> 
+                <div class="section__rules-content">
+                    <p class="section__bold-paragraph">Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold".</p>
+                    <ul class="section__list">
+                        <li>
+                            If the player rolls a 1, they score nothing and it becomes the next player's turn.
+                        </li>
+                        <li>
+                            If the player rolls any other number, it is added to their turn total and the player's turn continues.
+                        </li>
+                        <li>
+                            If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.
+                        </li>
+                        <li>
+                            The first player to score 100 or more points wins.
+                        </li>
+                    </ul>
+                    <p><em>For example</em>, the first player, Ann, begins a turn with a roll of 5. Ann could hold and score 5 points, but chooses to roll again. Ann rolls a 2, and could hold with a turn total of 7 points, but chooses to roll again. Ann rolls a 1, and must end her turn without scoring. The next player, Bob, rolls the sequence 4-5-3-5-5, after which he chooses to hold, and adds his turn total of 22 points to his score.</p>
+                </div>
+                <footer class="section__footer">
+                    <span class="section__footer-content"><a href="#start" class="btn-round btn-back-rules">&larr;</a></span>
+                </footer>
+            </div>
+        </section>
+        <script src="js/pig-game.js"></script>
+    </body>
+</html>
